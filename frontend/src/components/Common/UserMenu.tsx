@@ -18,10 +18,20 @@ const UserMenu = () => {
       {/* Desktop */}
       <Flex>
         <MenuRoot>
-          <MenuTrigger asChild p={2}>
-            <Button data-testid="user-menu" variant="solid" maxW="sm" truncate>
+          <MenuTrigger asChild>
+            <Button 
+              data-testid="user-menu" 
+              variant="ghost" 
+              size="sm"
+              color="gray.700"
+              _hover={{ bg: "rgba(255, 255, 255, 0.2)", color: "red.600" }}
+              _active={{ bg: "rgba(255, 255, 255, 0.3)" }}
+              transition="all 0.2s"
+            >
               <FaUserAstronaut fontSize="18" />
-              <Text>{user?.full_name || "User"}</Text>
+              <Text ml={2} display={{ base: "none", md: "block" }}>
+                {user?.full_name || "User"}
+              </Text>
             </Button>
           </MenuTrigger>
 

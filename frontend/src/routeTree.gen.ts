@@ -18,8 +18,11 @@ import { Route as LoginImport } from './routes/login'
 import { Route as LayoutImport } from './routes/_layout'
 import { Route as LayoutIndexImport } from './routes/_layout/index'
 import { Route as LayoutSettingsImport } from './routes/_layout/settings'
+import { Route as LayoutProductImport } from './routes/_layout/product'
+import { Route as LayoutOrganizationsImport } from './routes/_layout/organizations'
 import { Route as LayoutItemsImport } from './routes/_layout/items'
 import { Route as LayoutAdminImport } from './routes/_layout/admin'
+import { Route as LayoutPaymentsIndexImport } from './routes/_layout/payments/index'
 
 // Create/Update Routes
 
@@ -58,6 +61,16 @@ const LayoutSettingsRoute = LayoutSettingsImport.update({
   getParentRoute: () => LayoutRoute,
 } as any)
 
+const LayoutProductRoute = LayoutProductImport.update({
+  path: '/product',
+  getParentRoute: () => LayoutRoute,
+} as any)
+
+const LayoutOrganizationsRoute = LayoutOrganizationsImport.update({
+  path: '/organizations',
+  getParentRoute: () => LayoutRoute,
+} as any)
+
 const LayoutItemsRoute = LayoutItemsImport.update({
   path: '/items',
   getParentRoute: () => LayoutRoute,
@@ -65,6 +78,11 @@ const LayoutItemsRoute = LayoutItemsImport.update({
 
 const LayoutAdminRoute = LayoutAdminImport.update({
   path: '/admin',
+  getParentRoute: () => LayoutRoute,
+} as any)
+
+const LayoutPaymentsIndexRoute = LayoutPaymentsIndexImport.update({
+  path: '/payments/',
   getParentRoute: () => LayoutRoute,
 } as any)
 
@@ -100,12 +118,24 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LayoutItemsImport
       parentRoute: typeof LayoutImport
     }
+    '/_layout/organizations': {
+      preLoaderRoute: typeof LayoutOrganizationsImport
+      parentRoute: typeof LayoutImport
+    }
+    '/_layout/product': {
+      preLoaderRoute: typeof LayoutProductImport
+      parentRoute: typeof LayoutImport
+    }
     '/_layout/settings': {
       preLoaderRoute: typeof LayoutSettingsImport
       parentRoute: typeof LayoutImport
     }
     '/_layout/': {
       preLoaderRoute: typeof LayoutIndexImport
+      parentRoute: typeof LayoutImport
+    }
+    '/_layout/payments/': {
+      preLoaderRoute: typeof LayoutPaymentsIndexImport
       parentRoute: typeof LayoutImport
     }
   }
@@ -117,8 +147,11 @@ export const routeTree = rootRoute.addChildren([
   LayoutRoute.addChildren([
     LayoutAdminRoute,
     LayoutItemsRoute,
+    LayoutOrganizationsRoute,
+    LayoutProductRoute,
     LayoutSettingsRoute,
     LayoutIndexRoute,
+    LayoutPaymentsIndexRoute,
   ]),
   LoginRoute,
   RecoverPasswordRoute,
