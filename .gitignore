@@ -4,6 +4,8 @@ node_modules/
 /playwright-report/
 /blob-report/
 /playwright/.cache/
-
+.env
 
 /backend/.venv/
+
+./.env_eks
