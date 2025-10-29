@@ -1,20 +1,19 @@
-# Full Stack FastAPI Template
+# EKS User Portal
 
-<a href="https://github.com/fastapi/full-stack-fastapi-template/actions?query=workflow%3ATest" target="_blank"><img src="https://github.com/fastapi/full-stack-fastapi-template/workflows/Test/badge.svg" alt="Test"></a>
-<a href="https://coverage-badge.samuelcolvin.workers.dev/redirect/fastapi/full-stack-fastapi-template" target="_blank"><img src="https://coverage-badge.samuelcolvin.workers.dev/fastapi/full-stack-fastapi-template.svg" alt="Coverage"></a>
+A user portal for Enterprise Knowledge Systems (EKS) built on the Full Stack FastAPI Template.
 
 ## Technology Stack and Features
 
 - ⚡ [**FastAPI**](https://fastapi.tiangolo.com) for the Python backend API.
-    - 🧰 [SQLModel](https://sqlmodel.tiangolo.com) for the Python SQL database interactions (ORM).
-    - 🔍 [Pydantic](https://docs.pydantic.dev), used by FastAPI, for the data validation and settings management.
-    - 💾 [PostgreSQL](https://www.postgresql.org) as the SQL database.
+  - 🧰 [SQLModel](https://sqlmodel.tiangolo.com) for the Python SQL database interactions (ORM).
+  - 🔍 [Pydantic](https://docs.pydantic.dev), used by FastAPI, for the data validation and settings management.
+  - 💾 [PostgreSQL](https://www.postgresql.org) as the SQL database.
 - 🚀 [React](https://react.dev) for the frontend.
-    - 💃 Using TypeScript, hooks, Vite, and other parts of a modern frontend stack.
-    - 🎨 [Chakra UI](https://chakra-ui.com) for the frontend components.
-    - 🤖 An automatically generated frontend client.
-    - 🧪 [Playwright](https://playwright.dev) for End-to-End testing.
-    - 🦇 Dark mode support.
+  - 💃 Using TypeScript, hooks, Vite, and other parts of a modern frontend stack.
+  - 🎨 [Chakra UI](https://chakra-ui.com) for the frontend components.
+  - 🤖 An automatically generated frontend client.
+  - 🧪 [Playwright](https://playwright.dev) for End-to-End testing.
+  - 🦇 Dark mode support.
 - 🐋 [Docker Compose](https://www.docker.com) for development and production.
 - 🔒 Secure password hashing by default.
 - 🔑 JWT (JSON Web Token) authentication.
@@ -24,33 +23,47 @@
 - 🚢 Deployment instructions using Docker Compose, including how to set up a frontend Traefik proxy to handle automatic HTTPS certificates.
 - 🏭 CI (continuous integration) and CD (continuous deployment) based on GitHub Actions.
 
-### Dashboard Login
+## EKS User Portal Features
 
-[![API docs](img/login.png)](https://github.com/fastapi/full-stack-fastapi-template)
+- 🧙‍♂️ Intuitive wizard interface for model deployment
+- 🖥️ Compute resource selection and configuration
+- 🤖 AI model selection from various providers
+- ⚙️ Advanced server configuration options
+- 🧠 Knowledge distillation capabilities for model optimization
+- 🔄 Support for GPT and META model frameworks
+- 📊 Visual process monitoring and management
 
-### Dashboard - Admin
+### Login
 
-[![API docs](img/dashboard.png)](https://github.com/fastapi/full-stack-fastapi-template)
+[![Login Screen](img/login.png)](https://github.com/fastapi/full-stack-fastapi-template)
 
-### Dashboard - Create User
+### EKS User Portal Wizard
 
-[![API docs](img/dashboard-create.png)](https://github.com/fastapi/full-stack-fastapi-template)
+[![EKS Wizard](img/01_EKS_IMG_WIZARD.jpg)](https://github.com/fastapi/full-stack-fastapi-template)
 
-### Dashboard - Items
+### Compute Selection
 
-[![API docs](img/dashboard-items.png)](https://github.com/fastapi/full-stack-fastapi-template)
+[![Select Compute](img/02_SELECT_COMPUTE.jpeg)](https://github.com/fastapi/full-stack-fastapi-template)
 
-### Dashboard - User Settings
+### Model Selection
 
-[![API docs](img/dashboard-user-settings.png)](https://github.com/fastapi/full-stack-fastapi-template)
+[![Select Model](img/03_SELECT_MODEL.jpeg)](https://github.com/fastapi/full-stack-fastapi-template)
 
-### Dashboard - Dark Mode
+### Server Configuration
 
-[![API docs](img/dashboard-dark.png)](https://github.com/fastapi/full-stack-fastapi-template)
+[![Server Config](img/04_SERVER_CONFIG.jpeg)](https://github.com/fastapi/full-stack-fastapi-template)
 
-### Interactive API Documentation
+### Knowledge Distillation
 
-[![API docs](img/docs.png)](https://github.com/fastapi/full-stack-fastapi-template)
+[![Knowledge Distillation](img/05_KNOWLEDGE_DISTILATION.jpeg)](https://github.com/fastapi/full-stack-fastapi-template)
+
+### Knowledge Distillation - GPT/META
+
+[![KD GPT META](img/06_KD_GPT_META.jpeg)](https://github.com/fastapi/full-stack-fastapi-template)
+
+### Knowledge Distillation Process
+
+[![KD Process](img/07_KD_Process.jpeg)](https://github.com/fastapi/full-stack-fastapi-template)
 
 ## How To Use It
 
